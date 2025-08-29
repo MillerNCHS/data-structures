@@ -1,3 +1,11 @@
+/*
+ * Shriya Kunnanath
+ * 8/29/2025
+ * Software Engineering 1
+ * Reverse List Program
+ */
+
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
@@ -13,18 +21,19 @@ public class ListUtil
     */
     public static void reverse(LinkedList<String> strings)
     {
+        //made a list iterator and arraylist to set up the reversed list and an iterator to go through the linkedlist
         ListIterator<String> iterator = strings.listIterator();
-        String end ="";
-        iterator.next();
+        ArrayList<String> tempList = new ArrayList<>(); 
+
+        //the while loop goes through the list
         while(iterator.hasNext()){
-           // iterator.next();
-            end = strings.getFirst();
             iterator.next();
-            strings.add(end);
-            //String temp =  iterator.next();
+
+            //the first value is added to templist and then removed from the original linkedlist
+            tempList.add(0, strings.getFirst());
+            iterator.remove();
         }
-        /* get last add and then add to teh current position with the iterator remove the previoous and move on to the next keep 
-         * array list
-         */
+        //all the content from tempList is transfered into the empty strings linkedlist
+        strings.addAll(tempList);
     }
 }
