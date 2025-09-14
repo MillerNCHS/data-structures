@@ -1,65 +1,70 @@
+
+/**
+ * Shriya Kunnanath
+ * 9/14/25
+ * gradebook program
+*/
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-/**
- * A program to add, remove, modify or print
- * student names and grades.
-*/
-public class Gradebook
-{
-    public static void main(String[] args)
-    {
+public class Gradebook {
+    public static void main(String[] args) {
+        // Create scanner and gradebook map
         Scanner in = new Scanner(System.in);
-
         Map<String, String> gradebook = new HashMap<>();
-      //Set<String> keys = gradebook.keySet();
-       
 
+        // Loop until user chooses to quit
         boolean done = false;
-        while(!done)
-        {
+
+        while (!done) {
+            // Prompt for user action
             System.out.println("A)dd R)emove M)odify P)rint Q)uit");
-        
             String input = in.next().toUpperCase();
-            if (input.equals("Q"))
-            {
+
+            // Quit the program
+            if (input.equals("Q")) {
                 done = true;
-            } else if (input.equals("A"))
-            {
+
+            // Add a student and their grade
+            } else if (input.equals("A")) {
                 String name = in.next();
                 String grade = in.next();
                 gradebook.put(name, grade);
 
-            } else if (input.equals("R"))
-            {
+            // Remove a student
+            } else if (input.equals("R")) {
                 String name = in.next();
+                if (gradebook.containsKey(name)) {
+                    gradebook.remove(name);
+                } 
 
-                Set<String> keys = gradebook.keySet();
-                 for (String key: keys) {
-                    if (key==name){
-                        gradebook.remove(key);}
-            }}else if (input.equals("M"))
-            {
+            // Modify a student's grade
+            } else if (input.equals("M")) {
                 String name = in.next();
-                String grade = in.next();
+                if (gradebook.containsKey(name)) {
+                    String grade = in.next();
+                    gradebook.put(name, grade);
+                } 
 
-                Set<String> list=gradebook.keySet();
-                for (String key: list){
-                    if (key.equals(name)){
-                        gradebook.put(name, grade);
+            // Print all students and grades in alphabetical order
+            } else if (input.equals("P")) {
+                System.out.println();
+                List<String> names = new ArrayList<>(gradebook.keySet());
+                Collections.sort(names);
 
-            }else if (input.equalsIgnoreCase("P"))
-            {
-                Set<String> x = gradebook.keySet();
-                 for (String i: x) {
-                    System.out.println(i + ": "+gradebook.get(i));
-        }
-            } else
-            {
+                for (String name : names) {
+                    System.out.println(name + ": " + gradebook.get(name));
+                }
+                System.out.println();
+
+            } else {
                 done = true;
             }
         }
     }
-        }}}
+}
