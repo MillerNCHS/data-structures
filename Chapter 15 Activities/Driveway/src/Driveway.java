@@ -66,14 +66,16 @@ public class Driveway
       * Prints the driveway and street details to the screen.
     */
     public void print()
-    {
-        System.out.println("In Driveway, starting at first in (one license plate per line):");
-        // Print the cars in the driveway here
-        System.out.println(driveway); 
-
-        System.out.println("In Street, starting at first in (one license plate per line):");
-        // Print the cars in the street here
-        System.out.println(street); 
-
+{
+    System.out.println("In Driveway, starting at first in (one license plate per line):");
+    for (int car : driveway) {
+        System.out.println(car);
     }
+
+    System.out.println("In Street, starting at first in (one license plate per line):");
+    for (int car : street) {
+        System.out.println(car);
+    }
+}
+
 }
