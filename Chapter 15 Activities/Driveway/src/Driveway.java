@@ -50,11 +50,18 @@ public class Driveway
     public void remove(int licensePlate)
     {
         // Complete this method
-        driveway.pop();
+        while (!driveway.isEmpty() && driveway.peek() != licensePlate) {
+            int car = driveway.pop();
+            street.push(car);}
 
+        if (!driveway.isEmpty() && driveway.peek() == licensePlate) {
+            driveway.pop();}
+        
 
-    }
-
+//after a car is taken out, the ones on the street are always returned to the driveway
+        while (!street.isEmpty()) {
+            int car = street.pop();
+            driveway.push(car);}}
     /**
       * Prints the driveway and street details to the screen.
     */

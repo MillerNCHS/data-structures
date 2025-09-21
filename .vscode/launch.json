@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "HTMLChecker",
+            "request": "launch",
+            "mainClass": "HTMLChecker",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "FloodFillTester",
+            "request": "launch",
+            "mainClass": "FloodFillTester",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "DrivewayDemo",
+            "request": "launch",
+            "mainClass": "DrivewayDemo",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
