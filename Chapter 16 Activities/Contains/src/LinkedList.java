@@ -9,7 +9,6 @@ import java.util.NoSuchElementException;
 public class LinkedList
 {
     private Node first;
-    private int currentSize;
 
     private Node last;
     private int lastIndex;
@@ -20,7 +19,6 @@ public class LinkedList
     public LinkedList()
     {
         first = null;
-        currentSize = 0;
         last = null;
         lastIndex = -1;
     }
@@ -31,7 +29,7 @@ public class LinkedList
     */
     public int size()
     {
-        return currentSize;
+       // ...
     }
 
     /**
@@ -65,7 +63,6 @@ public class LinkedList
             throw new NoSuchElementException();
         Object element = first.data;
         first = first.next;
-        currentSize--;
         // clear old cached data
         last = null;
         lastIndex = -1;
@@ -83,7 +80,6 @@ public class LinkedList
         newNode.data = element;
         newNode.next = first;
         first = newNode;
-        currentSize++;
         // clear old cached data
         last = null;
         lastIndex = -1;
