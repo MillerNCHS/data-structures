@@ -9,7 +9,6 @@ import java.util.NoSuchElementException;
 public class LinkedList
 {
     private Node first;
-
     private Node last;
     private int lastIndex;
 
@@ -38,6 +37,16 @@ public class LinkedList
         @return If the object exists in the list.
     */
     public boolean contains(Object obj)
+    {
+        // ...
+    }
+
+    /**
+        Checks if the given node or any in its following nodes contains the given object.
+        @param obj The object to be checked for.
+        @return If the object exists in the node or its following nodes.
+    */
+    public static boolean contains(Node start, Object obj)
     {
         // ...
     }
