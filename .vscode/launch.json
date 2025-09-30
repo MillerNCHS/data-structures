@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SizeTester",
+            "request": "launch",
+            "mainClass": "SizeTester",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
             "name": "ListTester",
             "request": "launch",
             "mainClass": "ListTester",
