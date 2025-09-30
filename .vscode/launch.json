@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ListTester",
+            "request": "launch",
+            "mainClass": "ListTester",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
             "name": "HTMLChecker",
             "request": "launch",
             "mainClass": "HTMLChecker",

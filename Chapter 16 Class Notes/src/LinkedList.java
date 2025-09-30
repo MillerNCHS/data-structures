@@ -222,4 +222,10 @@ public class LinkedList
 
 
     }//LinkedListIterator
+
+
+    public boolean contains(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'contains'");
+    }
 }//LinkedList
