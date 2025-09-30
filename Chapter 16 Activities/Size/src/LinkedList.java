@@ -21,7 +21,7 @@ public class LinkedList
     /**
     Computes the size of the linked list by traversing the nodes.
     @return the number of elements in the list
-*/
+
     public int size()
     {
         int count = 0;
@@ -32,8 +32,28 @@ public class LinkedList
             current = current.next;
         }
         return count;
-    }
+    }*/
 
+/**
+    Computes the size of the linked list recursively.
+    @return the number of elements in the list
+*/
+public int size()
+{
+    return size(first);
+}
+
+/**
+    Recursive helper method to compute size.
+    @param start The node to start counting from.
+    @return The number of nodes from start to end.
+*/
+private static int size(Node start)
+{
+    if (start == null)
+        return 0;
+    return 1 + size(start.next);
+}
 
     /**
         Returns the first element in the linked list.

@@ -44,6 +44,26 @@ public class LinkedList
         return contains(first, obj);
     }
 
+
+  /* CONTAINS METHOD WITHOUT ITERATOR
+    public boolean contains(Object obj)
+    {
+        Node current = first;
+        while (current != null)
+        {
+            if (obj == null && current.data == null) {
+                return true;
+            }
+            if (obj != null && obj.equals(current.data)) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }*/
+
+
+
     /**
         Recursive helper method for contains.
         @param start The current node in the recursion.
