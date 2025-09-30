@@ -1,0 +1,105 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ListTester",
+            "request": "launch",
+            "mainClass": "ListTester",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "HTMLChecker",
+            "request": "launch",
+            "mainClass": "HTMLChecker",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "FloodFillTester",
+            "request": "launch",
+            "mainClass": "FloodFillTester",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "DrivewayDemo",
+            "request": "launch",
+            "mainClass": "DrivewayDemo",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "FirstLetterMap",
+            "request": "launch",
+            "mainClass": "FirstLetterMap",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "Gradebook",
+            "request": "launch",
+            "mainClass": "Gradebook",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "ListDemo",
+            "request": "launch",
+            "mainClass": "ListDemo",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "MapDemo",
+            "request": "launch",
+            "mainClass": "MapDemo",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "PriorityQueueDemo",
+            "request": "launch",
+            "mainClass": "PriorityQueueDemo",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "QueueDemo",
+            "request": "launch",
+            "mainClass": "QueueDemo",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "StackDemo",
+            "request": "launch",
+            "mainClass": "StackDemo",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "SudokuSolver",
+            "request": "launch",
+            "mainClass": "SudokuSolver",
+            "projectName": "data-structures_addf3fee"
+        },
+        {
+            "type": "java",
+            "name": "WordAnalysis",
+            "request": "launch",
+            "mainClass": "WordAnalysis",
+            "projectName": "data-structures_addf3fee"
+        }
+    ]
+}
