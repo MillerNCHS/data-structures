@@ -1,3 +1,4 @@
+import java.nio.channels.IllegalSelectorException;
 import java.util.NoSuchElementException;
 
 /**
@@ -20,12 +21,17 @@ public class LinkedList
     }
 
 
-
     /**
         Returns the first element in the linked list.
         @return the first element in the linked list
     */
+    public Object getFirst() {
+        if (this.first == null) {
+            throw new NoSuchElementException();
+        }
 
+        return this.first.data;
+    }
 
 
 
@@ -44,8 +50,6 @@ public class LinkedList
     }
 
 
-
-
     /**
         Adds an element to the front of the linked list.
         @param element the element to add
@@ -58,13 +62,40 @@ public class LinkedList
     }
 
 
-
-
     /**
         Returns an iterator for iterating through this list.
         @return an iterator for iterating through this list
     */
+    public ListIterator listIterator() {
+        return new LinkedListIterator();
+    }
 
+    public String toString() {
+        if (first == null) {
+            return "[]";
+        }
+
+        // StringBuilder is mutable
+        // It is more efficient for manipulating strings
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+
+        Node current = first;
+        while (current != null) {
+            sb.append(current.data);
+
+            if (current.next != null) {
+                sb.append(", ");
+            }
+
+            current = current.next; // Move to the next Node
+        }
+
+        sb.append("]");
+
+        return sb.toString();
+
+    }
 
 
 
@@ -184,14 +215,20 @@ public class LinkedList
 
 
 
-
-
-
         /**
             Sets the last traversed element to a different value.
             @param element the element to set
         */
+        public void set(Object element) {
+            if (!isAfterNext) {
+                throw new IllegalStateException();
+            }
 
+            position.data = element;
+
+            // We don't have to reset isAfterNext because
+            // the structure of the list has not changed
+        }
 
 
 
