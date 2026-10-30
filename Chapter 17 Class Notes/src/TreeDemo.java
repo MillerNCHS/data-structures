@@ -13,5 +13,25 @@ public class TreeDemo
       Tree t4 = new Tree("Savannah");
       t2.addSubtree(t4);
       System.out.println("Size: " + t1.size());
+
+      // Binary Tree Test
+      BinaryTree empty = new BinaryTree();
+      BinaryTree bt4 = new BinaryTree("Chicago");
+      BinaryTree bt3 = new BinaryTree("Atlanta");
+      BinaryTree bt2 = new BinaryTree("Miami", bt4, empty);
+      BinaryTree bt1 = new BinaryTree("San Diego", bt2, bt3);
+
+      System.out.println("Binary Tree Root: " + bt1.data());
+      System.out.println("Binary Tree Height: "+bt1.height());
+
+      TreeDemo.printTree(bt1, "", "");
+   }
+
+   public static void printTree(BinaryTree t, String indent, String branch)
+   {
+      if (t.isEmpty()) return;
+      TreeDemo.printTree(t.right(), indent + "      ", " /-- ");
+      System.out.println(indent + branch + t.data());
+      TreeDemo.printTree(t.left(), indent + "      ", " \\-- ");
    }
 }
