@@ -75,6 +75,18 @@ public class LinkedList
         return new LinkedListIterator();
     }
 
+    public int size(){
+        int count = 0;
+        Node current = first;
+        while (current != null){
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+
+    
+
     public String toString(){
         if (first == null){
             return "[]";
